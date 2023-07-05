@@ -5,41 +5,35 @@
   margin: 0;
   font-family: 'Maven Pro', sans-serif;
 }
+.homeHTML {
+  background-color: #111;
+}
+/*------------------------------------------HEADER DESKTOP------------------------------------------*/
 
-/*------------------------------------------DESKTOP------------------------------------------*/
-/*------------------------------------------HEADER------------------------------------------*/
-@media (min-width: 720px )
-{
-header
-  {
+@media (min-width: 720px ) {
+header {
     background-color: #222;
     flex-direction: row;
     display: flex;
   }
-  
-  .divHeader /*div da imagem*/
-  {
+  .divHeader {/*div da imagem*/
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 50vw;
   }
-  
-  .divHeader img 
-  {
+  .divHeader img {
     padding-inline: 5%;
     width: clamp(300px, 30vw, 600px);
   }
-  .navHeader/*só o texto do header*/
-  {
+  .navHeader { /*só o texto do header*/
   width:100%;
   display:flex;
   flex-direction: row;
   align-items: center;
   }
-  .listaNav
-  {
+  .listaNav {
     display: flex;
     width: 100%;
     padding: 0;
@@ -48,64 +42,44 @@ header
     justify-content: space-around;
     color: white;
   }
-  a
-  {
+  a {
   font-size:  clamp(25px, 3vw, 50px);
   color:white;
-  
   text-decoration: none;
   }
 
-  /*------------------------------------------FOOTER------------------------------------------*/
+  /*------------------------------------------FOOTER DESKTOP------------------------------------------*/
 
-  .divFooter
-  {
+  .divFooter {
   padding: 2vw;
   background-color: #222;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   }
-  .divFooter p
-  {
+  .divFooter p {
     font-size: clamp(20px, 2vw, 40px);
     color: white;
     text-align: center;
   }
 }
 
-
-
-/*------------------------------------------MOBILE------------------------------------------*/
-/*------------------------------------------HOME------------------------------------------*/
-@media (max-width: 720px )
-{
-  
-header
-{
+/*------------------------------------------HEADER DESKTOP------------------------------------------*/
+@media (max-width: 720px ) {
+header {
   background-color: #222;
   flex-direction: column;
   display: flex;
 }
-
-.divHeader
-{
+.divHeader {
 display: flex;
 align-items: center;
 justify-content: center;
 }
-
-.divHeader img 
-{
+.divHeader img {
   width: 80vw;
 }
-.navHeader
-{
-
-
-}
-.listaNav
-{
+.listaNav {
   font-size: clamp(15px, 4vw, 30px);
   color:white;
   margin:0;
@@ -116,92 +90,68 @@ justify-content: center;
   list-style: none;
   display:flex;
 }
-a
-{
+a {
 color: white;
 text-decoration: none;
 }
 
-/*------------------------------------------FOOTER------------------------------------------*/
+/*------------------------------------------FOOTER DESKTOP------------------------------------------*/
 
-.divFooter
-{
+.divFooter {
 padding: 2vw;
 background-color: #222;
 display: flex;
 flex-direction: row;
 justify-content: space-around;
 }
-.divFooter p
-{
+.divFooter p {
   font-size: clamp(9px, 3.3vw, 50px);
   color: white;
   text-align: center;
 }
-.divFooter1
-{
+.divFooter1 {
 width:50%
 }
-
-.divFooter2
-{
+.divFooter2 {
   width:50%
 }
 }
 
+/*------------------------------------------COMPRAS MOBILE------------------------------------------*/
 
-/*------------------------------------------COMPRAS------------------------------------------*/
-
-@media screen and  (max-width: 720px)
-{
-  .imagemcompra
-{
+@media screen and  (max-width: 720px) {
+  .imagemcompra {
   margin-top: 10vw;
   margin-bottom: 5vw;
   width: 40vw;
   display: flex;
 }
-
-  .divimagemcompra
-{
+  .divimagemcompra {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  
 }
-
-  .bodycompras
-{
+  .bodycompras {
   margin-left: 10vw;
 }
-
-  h2
-{
+  h2 {
   margin-left:4vw;
   margin-top:4vw;
 }
-
-  .descricaocompra
-{
+  .descricaocompra {
   margin-left: 4vw;      
   margin-right: 30vw;
 }  
-
-  .precocompra
-{
+  .precocompra {
   margin-top: 10vw;
   margin-left: 4vw;
 }
-
-  .precomenorcompra
-{
+  .precomenorcompra {
   font-size: 3vw;
   margin-left:4vw;
 }
-
-  .comprar
-{
+  .comprar {
   background-color: orange;
   color: white;
   border-radius: 5vw;
@@ -217,57 +167,42 @@ width:50%
   padding-bottom: 2vw;
   margin-top: 7vw;
 }
-
-.info
-{
+.info {
   text-align: center; 
   margin-left: 10vw;
   margin-right: 10vw;
   margin-bottom: 3%;
 }
-
-.titinfo
-{
+.titinfo {
   margin-top: 10vw;
   font-size: 6vw;
 }
-
-
 .info hr {
   border: 1px solid #333;
   border-radius: 1px;
   width: 80vw;
   margin-top: 2vw;
 }
-
-.comprar:hover
-{
+.comprar:hover {
   background-color:rgb(204, 204, 204);
   color: black;
 }
-
-.infotexto p
-{
+.infotexto p {
   font-size: 5vw;
   padding:1vw;
- 
 }
 }
 
-@media screen and  (min-width: 720px)
-{
+/*------------------------------------------COMPRAS DESKTOP------------------------------------------*/
 
-.imagemcompra
-  {
+@media screen and  (min-width: 720px) {
+.imagemcompra {
     margin-top: 10vw;
     margin-bottom: 5vw;
     width: 26vw;
     display: flex;
-    
   }
-  
-.desktopcompra
-  {
+.desktopcompra {
   display:flex;
   align-items: start;
   justify-content: start;
@@ -276,19 +211,13 @@ width:50%
   margin-right: 10vw;
   font-size: 2vw;
   }
-
-.comprardesktop
-  {
+.comprardesktop {
     margin-left: 12vw;
   }
-
-  h2
-  {
+  h2 {
     margin-top: 5vw;
   }
-  
-  .comprar
-  {
+  .comprar {
     background-color: orange;
     color: white;
     border-radius: 5vw;
@@ -305,59 +234,47 @@ width:50%
     margin-top: 2vw;
     /* transition-duration: 0.4s; */
   }
-
-  .descricaocompra
-  {
+  .descricaocompra {
     margin-top: 1vw;
-  }  
-
-  .precocompra
-  {
+  }
+  .precocompra {
     margin-top: 12vw;
   }
-  
-    .precomenorcompra
-  {
+    .precomenorcompra {
     font-size: 1vw;
   }
-
-  .info
-{
+  .info {
   text-align: center; 
   margin-left: 10vw;
   margin-right: 10vw;
   margin-bottom: 3%;
 }
-
-.titinfo
-{
+.titinfo {
   margin-top: 10vw;
   font-size: 3vw;
 }
-
-
 .info hr {
   border: 1px solid #333;
   border-radius: 1px;
   width: 80vw;
   margin-top: 2vw;
 }
-
-.comprar:hover
-{
+.comprar:hover {
   background-color:rgb(204, 204, 204);
   color: black;
 }
-
-.infotexto p
-{
+.infotexto p {
   font-size: 2vw;
   padding:1vw;
 }
 }
 
-/*------------------------------------------CATÁLAGO------------------------------------------*/
+/*------------------------------------------CATÁLAGO DESKTOP------------------------------------------*/
+
 @media (min-width: 720px ) {
+  body {
+    height: 100vh;
+  }
   .mainCat {
     width: clamp(700px, 90vw, 1700px);
     display: flex;
@@ -365,7 +282,8 @@ width:50%
     flex-wrap: wrap;
     margin-left: auto;
     margin-right: auto;
-    min-height: 80vh;
+    min-height: 100vh;
+    width: 55%;
   }
   .scaniaAzul {
     display: flex;
@@ -373,38 +291,52 @@ width:50%
     width: 30%;
     aspect-ratio: 1/1;
     text-align: center;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border: 1px solid rgba(3, 3, 3, 0.2);
+    /* box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.2); */
+    border-radius: 20px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
   .scaniaAzulIMG {
     display: flex;
     aspect-ratio: 1/1;
     justify-content: center;
     width: 100%;
-    height: auto;
-    overflow: hidden;
     margin-bottom: auto;
+    overflow: visible;
+    align-items: center;
   }
   .scaniaAzul img {
-    margin-top: auto;
-    margin-bottom: auto;
-    width: 70%;
-    height: auto;
+    width: 80%;
+    transition: 0.7s;
+    overflow: visible;
+    z-index: 2;
+  }
+  .scaniaAzulIMG :hover {
+    transform: scale(1.05);
   }
   .catInfo {
+    aspect-ratio: 2/1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
-    height: 25%;
-    font-size: clamp(10px, 3vw, 40px);
+    height: auto;
+    font-size: clamp(10px, 2vw, 30px);
   }
   .catInfo hr {
     border: 3px solid #333;
     border-radius: 1px;
-    width: 100%;
+    width: 99%;
+  }
+  .bmwFoto {
+    width: 50% !important;
   }
 }
+
+/*------------------------------------------CATÁLAGO MOBILE------------------------------------------*/
 
 @media screen and  (max-width: 720px){
   .scaniaAzul {
@@ -419,7 +351,6 @@ width:50%
     width: 75vw;
     height: auto;
     padding-block: 15vw;
-
   }
   .scaniaAzul img {
     width: 100%;
@@ -429,7 +360,6 @@ width:50%
   .scaniaAzulIMG :hover {
     transform: scale(1.2);
   }
-
   .catInfo {
     display: flex;
     flex-direction: column;
@@ -443,4 +373,169 @@ width:50%
     border-radius: 1px;
     width: 80vw;
   }
+}
+/*------------------------------------------HOME MOBILE------------------------------------------*/
+@media screen and (max-width: 720px) {
+  .imageContainer1 {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    background-image: url(images/mercedes.jpeg);
+    background-size: cover;
+    background-position: 50%;
+  }
+  .imageContainer2 {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    background-image: url(images/harleyRed.jpeg);
+    background-size: cover;
+    background-position: 60%;
+  }
+  .imageContainer3 {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    background-image: url(images/scaniaRed.jpeg);
+    background-size: cover;
+    background-position: 80%;
+  }
+  .fundoEsc {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.8);
+    z-index: 1;
+  }
+  .preços {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-size: 4vw;
+  }
+  .fundoEsc h3 {
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 50%;
+    text-align: center;
+    font-size: 5vw;
+  }
+  .homeMain img {
+    position: absolute;
+    width: 40vw;
+    padding: 5%;
+    right: 0;
+  }
+.vejaMais {
+  background-color: #111;
+  text-align: center;
+  font-size: 5vw;
+  color: white;
+}
+.vejaMais h3 {
+  padding: 7%;
+  padding-bottom: 0%;
+}
+.vejaMais hr {
+  border: 2px solid #ddd;
+  border-radius: 1px;
+  width: 80vw;
+  margin: 5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.preçoSpan {
+  text-decoration: underline;
+}
+}
+/*------------------------------------------HOME DESKTOP------------------------------------------*/
+@media screen and (min-width: 721px) {
+  .imageContainer1 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/mercedes.jpeg);
+    background-size: cover;
+    background-position: 50%;
+  }
+  .imageContainer2 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/harleyRed.jpeg);
+    background-size: cover;
+    background-position: 60%;
+  }
+  .imageContainer3 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/scaniaRed.jpeg);
+    background-size: cover;
+    background-position: 80%;
+  }
+  .fundoEsc {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.8);
+    z-index: 1;
+  }
+  .preços {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-size: clamp(16px, 4vw, 30px);
+  }
+  .preçoSpan {
+    font-size: clamp(16px, 5vw, 45px) !important;
+  }
+  .fundoEsc h3 {
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 50%;
+    text-align: center;
+    font-size: clamp(16px, 5vw, 60px) !important;
+  }
+  .homeMain img {
+    position: absolute;
+    width: clamp(300px, 40vw, 400px);
+    padding: clamp(5px, 5%, 10px);
+    right: 0;
+  }
+.vejaMais {
+  background-color: #111;
+  text-align: center;
+  font-size: 5vw;
+  color: white;
+}
+.vejaMais h3 {
+  font-size: clamp(16px, 5vw, 60px) !important;
+  padding: 4%;
+  padding-bottom: 0%;
+}
+.vejaMais hr {
+  border: 2px solid #ddd;
+  border-radius: 1px;
+  width: 80vw;
+  margin: 3%;
+  margin-left: auto;
+  margin-right: auto;
+}
 }
