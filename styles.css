@@ -61,19 +61,57 @@ header {
   text-decoration: none;
   }
   /*------------------------------------------FOOTER DESKTOP------------------------------------------*/
-
-  .divFooter {
-  padding: 2vw;
-  background-color: #222;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  }
-  .divFooter p {
-    font-size: clamp(20px, 2vw, 40px);
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     color: white;
-    text-align: center;
+    background-color: #111;
+    font-size: clamp(15px, 2vw, 25px);
   }
+  .divFooter1 {
+    width: clamp(200px, 50%, 400px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .divFooter1 p {
+    padding: 2.5%;
+    padding-left: 8% !important;
+  }
+  .divFooter1 img {
+    float: left;
+    width: clamp(25px, 3vw, 40px)
+  }
+  .divFooter2 {
+    width: clamp(200px, 50%, 400px);
+    padding: 2.5%;
+  }
+  .socialMedias {
+    display: flex;
+    width: 100%;
+    padding-top: 7.5%;
+    padding-bottom: 5%;
+    justify-content: space-between;
+  }
+  .socialMedias img {
+
+    width: clamp(50px, 5vw, 60px);
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .sobre {
+    width: 100%;
+  }
+  .sobre h4 {
+    text-align: center;
+    padding-bottom: 2.5%;
+  }
+  .sobre p {
+    text-align: justify;
+  }
+
 }
 
 /*------------------------------------------HEADER MOBILE------------------------------------------*/
@@ -586,9 +624,9 @@ footer {
     align-items: center;
     justify-content: space-between;
     width: 50%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    font-size: clamp(16px, 4vw, 30px);
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    font-size: clamp(12px, 2vw, 25px);
   }
   .preçoSpan {
     font-size: clamp(16px, 5vw, 45px) !important;
@@ -598,22 +636,21 @@ footer {
     margin-bottom: auto;
     width: 50%;
     text-align: center;
-    font-size: clamp(16px, 5vw, 60px) !important;
+    font-size: clamp(16px, 4vw, 40px) !important;
   }
   .homeMain img {
     position: absolute;
-    width: clamp(300px, 40vw, 400px);
+    width: clamp(200px, 20vw, 300px);
     padding: clamp(5px, 5%, 10px);
     right: 0;
   }
 .vejaMais {
   background-color: #111;
   text-align: center;
-  font-size: 5vw;
   color: white;
 }
 .vejaMais h3 {
-  font-size: clamp(16px, 5vw, 60px) !important;
+  font-size: clamp(16px, 4vw, 40px);
   padding: 4%;
   padding-bottom: 0%;
 }
