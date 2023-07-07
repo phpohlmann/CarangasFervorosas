@@ -219,6 +219,9 @@ footer {
 /*------------------------------------------COMPRAS MOBILE------------------------------------------*/
 
 @media screen and  (max-width: 720px) {
+  .comprMain {
+    min-height: 100vh;
+  }
   .imagemcompra {
   margin-top: 10vw;
   margin-bottom: 5vw;
@@ -295,6 +298,9 @@ footer {
 /*------------------------------------------COMPRAS DESKTOP------------------------------------------*/
 
 @media screen and  (min-width: 720px) {
+  .comprMain {
+    min-height: 100vh;
+  }
 .imagemcompra {
     margin-top: 10vw;
     margin-bottom: 5vw;
@@ -492,7 +498,7 @@ footer {
     font-size: 7vw;
     line-height: 150%;
   }
-  .catInfo hr {
+  .scaniaAzul hr {
     margin-top: 5vw;
     border: 3px solid #333;
     border-radius: 1px;
