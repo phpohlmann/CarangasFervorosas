@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
@@ -9,12 +9,20 @@
 </head>
 
 <body>
-  <site-header></site-header>
+  <style>
+    .divimagemcompra :hover{
+  background-image: url(images/mercedesRM.png);
+    }
+</style>
 
-  <main class="comprMain">
-  <div class="desktopcompra">
+<site-header></site-header>
+
+<main class="comprMain">
+<div class="desktopcompra">
     <div class="divimagemcompra">
-      <img src="images/mercedesRM.png" class="imagemcompra">
+      <figure class="zoom" onmousemove="zoom(event)">
+        <img src="images/mercedesRM.png" class="imagemcompra" alt="Mercedes-AMG GT">
+      </figure>
     </div>
     <div class="comprardesktop">
       <h2>Mercedes-AMG GT (2014)</h2>

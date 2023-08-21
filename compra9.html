@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
@@ -9,12 +9,20 @@
 </head>
 
 <body>
-  <site-header></site-header>
+  <style>
+    .divimagemcompra :hover{
+  background-image: url(images/harleyPretaRM.png);
+    }
+</style>
 
-  <main class="comprMain">
-  <div class="desktopcompra">
+<site-header></site-header>
+
+<main class="comprMain">
+<div class="desktopcompra">
     <div class="divimagemcompra">
-      <img src="images/harleyPretaRM.png" class="imagemcompra">
+      <figure class="zoom" onmousemove="zoom(event)">
+        <img src="images/harleyPretaRM.png" class="imagemcompra" alt="Harley-Davidson Fat Boy 114 (1990)">
+      </figure>
     </div>
     <div class="comprardesktop">
       <h2>Harley-Davidson Fat Boy 114 (1990)</h2>

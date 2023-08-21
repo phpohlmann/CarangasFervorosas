@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
@@ -9,13 +9,21 @@
 </head>
 
 <body>
+  <style>
+      .divimagemcompra :hover{
+    background-image: url(scaniaBlueRM.png);
+      }
+  </style>
+
   <site-header></site-header>
 
   <main class="comprMain">
   <div class="desktopcompra">
-    <div class="divimagemcompra">
-      <img src="images/scaniaBlueRM.png" class="imagemcompra">
-    </div>
+      <div class="divimagemcompra">
+        <figure class="zoom" onmousemove="zoom(event)">
+          <img src="scaniaBlueRM.png" class="imagemcompra" alt="Scania Azul">
+        </figure>
+      </div>
     <div class="comprardesktop">
       <h2>Scania R-series Azul (2004)</h2>
       <p class="descricaocompra">O Scania R-series é o caminhão robusto e confiável, projetado para enfrentar os

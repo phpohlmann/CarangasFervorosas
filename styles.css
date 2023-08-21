@@ -3,6 +3,7 @@
 * {
   border: 0;
   margin: 0;
+  box-sizing: border-box;
   font-family: 'Maven Pro', sans-serif;
 }
 .homeHTML {
@@ -11,6 +12,10 @@
 /*------------------------------------------HEADER DESKTOP------------------------------------------*/
 
 @media (min-width: 720px ) {
+.sanduiche {
+  display: none;
+  cursor: pointer;
+}
 header {
     width: 100%;
     background-color: #111;
@@ -36,7 +41,7 @@ header {
     justify-content: space-around;
     align-items: center;
   }
-  ul {
+  nav ul {
     list-style-type: none;
     display: flex;
     margin: 0;
@@ -116,15 +121,34 @@ header {
 
 /*------------------------------------------HEADER MOBILE------------------------------------------*/
 @media (max-width: 720px ) {
-  header {
-    background-color: #111;
-    display: flex;
-    justify-content: center;
+  .sanduiche {
+    display: block;
+    width: 40vw;
+    padding: 5vw;
+  }
+  .barra {
+    display: block;
+    width: 50px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+  }
+  .sanduiche.ativo .barra:nth-child(2) {
+    opacity: 0 !important;
+  }
+  .sanduiche.ativo .barra:nth-child(1) {
+    transform: translateY(8px) rotate(45deg)!important;
+  }
+  .sanduiche.ativo .barra:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg)!important;
   }
   header {
     width: 100%;
     display: flex;
-    flex-direction: column;
+    background-color: #111;
+    flex-wrap: wrap;
   }
   .logo {
     display: flex;
@@ -141,20 +165,28 @@ header {
     width: 100%;
     background-color: #111;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
-    padding-top: 2.5%;
-    padding-bottom: 2.5%;
   }
-  ul {
-    list-style-type: none;
-    display: flex;
-    margin: 0;
+  .osLinks {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #111;
+    width: 100%;
+    text-align: center;
+  }
+  .osLinks li {
+    padding-bottom: 5vw;
+  }
+  .osLinks.ativo{
     padding: 0;
-    width: 80%;
-    justify-content: space-around;
+    left: 0;
+    z-index: 10;
+    position:static;
   }
-  
   .social-icons {
     display: none;
   }
@@ -172,17 +204,18 @@ footer {
   align-items: center;
   color: white;
   background-color: #111;
-  font-size: clamp(25px, 3vw, 40px);
+  font-size: clamp(15px, 3vw, 40px);
 }
 .divFooter1 {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: left;
 }
 .divFooter1 p {
   padding-top: 2.5%;
+  padding-left: 10%;
 }
 .divFooter1 img {
   float: left;
@@ -298,6 +331,19 @@ footer {
 /*------------------------------------------COMPRAS DESKTOP------------------------------------------*/
 
 @media screen and  (min-width: 720px) {
+  .divimagemcompra :hover{
+    background-size: 200%;
+  }
+  figure.zoom .imagemcompra:hover {
+    opacity:0;
+    position: relative;
+    cursor: zoom-in;
+  }
+  figure.zoom .imagemcompra{
+
+    display: block;
+
+  }
   .comprMain {
     min-height: 100vh;
   }
