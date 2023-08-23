@@ -1,3 +1,4 @@
+
 function zoom(e){
   var zoomer = e.currentTarget;
   e.offsetX ? offsetX = e.offsetX : offsetX = e.touches[0].pageX
@@ -49,7 +50,7 @@ class siteFooter extends HTMLElement {
     <div class="divFooter2">
       <div class="sobre">
         <h4>Sobre Nós</h4>
-        <p>Há 4 dias vendendo <strong>Carangas</strong> com muito amor e carinho. Somos uma empresa supimpa e sagaz!</p>
+        <p>Há mais de 4 dias vendendo <strong>Carangas</strong> com muito amor e carinho. Somos uma empresa supimpa e sagaz!</p>
       </div>
       <div class="socialMedias">
         <a href="https://www.instagram.com/accounts/login/"><img src="images/instagram.png" alt="Ícone monocromático do Instagram"></a>
@@ -99,3 +100,29 @@ sanduiche.addEventListener("click", () => {
   sanduiche.classList.toggle("ativo");
   osLinks.classList.toggle("ativo");
 })
+
+
+
+const carrossel = document.querySelector(".carrossel");
+const divs = document.querySelectorAll(".divCar");
+let slideWidth = divs[0].clientWidth; 
+
+let idx = 0;
+
+function moverCarrossel() {
+  idx++;
+
+  if (idx >= divs.length) {
+    idx = 0;
+  }
+
+  carrossel.style.transform = `translateX(-${idx * slideWidth}px)`; 
+}
+
+function atualizarSlideWidth() {
+  slideWidth = divs[0].clientWidth; 
+  carrossel.style.transform = `translateX(-${idx * slideWidth}px)`; 
+}
+
+window.addEventListener("resize", atualizarSlideWidth); 
+setInterval(moverCarrossel, 3000);

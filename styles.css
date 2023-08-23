@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap');
 
 * {
@@ -8,6 +9,7 @@
 }
 .homeHTML {
   background-color: #111;
+  overflow-x: hidden;
 }
 /*------------------------------------------HEADER DESKTOP------------------------------------------*/
 
@@ -252,6 +254,7 @@ footer {
 /*------------------------------------------COMPRAS MOBILE------------------------------------------*/
 
 @media screen and  (max-width: 720px) {
+
   .comprMain {
     min-height: 100vh;
   }
@@ -319,13 +322,14 @@ footer {
   margin-top: 2vw;
 }
 .comprar:hover {
-  background-color:rgb(204, 204, 204);
+  background-color:rgb(204, 204, 204) !important;
   color: black;
 }
 .infotexto p {
   font-size: 5vw;
   padding:1vw;
 }
+
 }
 
 /*------------------------------------------COMPRAS DESKTOP------------------------------------------*/
@@ -553,46 +557,16 @@ footer {
 }
 /*------------------------------------------HOME MOBILE------------------------------------------*/
 @media screen and (max-width: 720px) {
-  .imageContainer1 {
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-    position: relative;
-    width: 100%;
-    height: 80vh;
-    background-image: url(images/mercedes.jpeg);
-    background-size: cover;
-    background-position: 50%;
-  }
-  .imageContainer2 {
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-    position: relative;
-    width: 100%;
-    height: 80vh;
-    background-image: url(images/harleyRed.jpeg);
-    background-size: cover;
-    background-position: 60%;
-  }
-  .imageContainer3 {
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-    position: relative;
-    width: 100%;
-    height: 80vh;
-    background-image: url(images/scaniaRed.jpeg);
-    background-size: cover;
-    background-position: 80%;
-  }
   .fundoEsc {
-    position: absolute;
-    width: 100%;
+    width: 100vw;
     bottom: 0;
     display: flex;
     justify-content: space-around;
     background-color: rgba(0, 0, 0, 0.6);
     color: white;
     box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.8);
-    z-index: 1;
+    z-index: 3;
+    position: absolute;
   }
   .preços {
     display: flex;
@@ -603,6 +577,11 @@ footer {
     padding-top: 1%;
     padding-bottom: 1%;
     font-size: 4vw;
+    background: none;
+  }
+  .preçoSpan {
+    font-size: clamp(16px, 5vw, 45px) !important;
+    background:none;
   }
   .fundoEsc h3 {
     margin-top: auto;
@@ -610,74 +589,84 @@ footer {
     width: 50%;
     text-align: center;
     font-size: 5vw;
+    background:none;
   }
   .homeMain img {
     position: absolute;
-    width: 40vw;
-    padding: 5%;
+    width: clamp(200px, 20vw, 300px);
+    padding: clamp(5px, 5%, 10px);
     right: 0;
   }
-  .homeMain {
-    scroll-snap-type: y mandatory;
+  .vejaMais {
+    background-color: #111;
+    text-align: center;
+    font-size: 5vw;
+    color: white;
   }
-.vejaMais {
-  background-color: #111;
-  text-align: center;
-  font-size: 5vw;
-  color: white;
+  .vejaMais h3 {
+    padding: 7%;
+    padding-bottom: 0%;
+  }
+  .vejaMais hr {
+    border: 2px solid #ddd;
+    border-radius: 1px;
+    width: 80vw;
+    margin: 5%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .preçoSpan {
+    text-decoration: underline;
+  }
+.carrossel{
+  overflow:hidden !important;    
+  width: 300vw;
+  display:flex;
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(0);
 }
-.vejaMais h3 {
-  padding: 7%;
-  padding-bottom: 0%;
+
+.divCar {
+  height: 100vh;
+  width: 100vw;
 }
-.vejaMais hr {
-  border: 2px solid #ddd;
-  border-radius: 1px;
-  width: 80vw;
-  margin: 5%;
-  margin-left: auto;
-  margin-right: auto;
+
+.divImg1{
+  background-image: url(images/mercedes.jpeg);
+  background-size:cover;
+  background-position: 50%;
+  width: 100%;
+  height: 100%;
 }
-.preçoSpan {
-  text-decoration: underline;
+
+.divImg2{
+  background-image: url(images/harleyRed.jpeg);
+  background-size:cover;
+  background-position: 60%;
+  width: 100%;
+  height: 100%;
+}
+
+.divImg3{
+  background-image: url(images/scaniaRed.jpeg);
+  background-size:cover;
+  background-position: 80%;
+  width: 100%;
+  height: 100%;
 }
 }
 /*------------------------------------------HOME DESKTOP------------------------------------------*/
 @media screen and (min-width: 721px) {
-  .imageContainer1 {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background-image: url(images/mercedes.jpeg);
-    background-size: cover;
-    background-position: 50%;
-  }
-  .imageContainer2 {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background-image: url(images/harleyRed.jpeg);
-    background-size: cover;
-    background-position: 60%;
-  }
-  .imageContainer3 {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background-image: url(images/scaniaRed.jpeg);
-    background-size: cover;
-    background-position: 80%;
-  }
   .fundoEsc {
-    position: absolute;
-    width: 100%;
+    width: 100vw;
     bottom: 0;
     display: flex;
     justify-content: space-around;
     background-color: rgba(0, 0, 0, 0.6);
     color: white;
     box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.8);
-    z-index: 1;
+    z-index: 3;
+    position: absolute;
   }
   .preços {
     display: flex;
@@ -688,9 +677,11 @@ footer {
     padding-top: 0.5%;
     padding-bottom: 0.5%;
     font-size: clamp(12px, 2vw, 25px);
+    background: none;
   }
   .preçoSpan {
     font-size: clamp(16px, 5vw, 45px) !important;
+    background:none;
   }
   .fundoEsc h3 {
     margin-top: auto;
@@ -698,6 +689,7 @@ footer {
     width: 50%;
     text-align: center;
     font-size: clamp(16px, 4vw, 40px) !important;
+    background:none;
   }
   .homeMain img {
     position: absolute;
@@ -723,6 +715,45 @@ footer {
   margin-left: auto;
   margin-right: auto;
 }
+
+.carrossel{
+  overflow:hidden !important;    
+  width: 300vw;
+  display:flex;
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(0);
+}
+
+.divCar {
+  height: 100vh;
+  width: 100vw;
+}
+
+.divImg1{
+  background-image: url(images/mercedes.jpeg);
+  background-size:cover;
+  background-position: 50%;
+  width: 100%;
+  height: 100%;
+}
+
+.divImg2{
+  background-image: url(images/harleyRed.jpeg);
+  background-size:cover;
+  background-position: 60%;
+  width: 100%;
+  height: 100%;
+}
+
+.divImg3{
+  background-image: url(images/scaniaRed.jpeg);
+  background-size:cover;
+  background-position: 80%;
+  width: 100%;
+  height: 100%;
+}
+
+
 }
   /*------------------------------------------HISTÓRIA DESKTOP------------------------------------------*/
   @media screen and (min-width: 720px) {
