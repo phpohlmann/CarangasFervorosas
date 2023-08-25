@@ -1,13 +1,17 @@
 
-function zoom(e){
+// Zoom
+function zoom(e) {
   var zoomer = e.currentTarget;
   e.offsetX ? offsetX = e.offsetX : offsetX = e.touches[0].pageX
   e.offsetY ? offsetY = e.offsetY : offsetX = e.touches[0].pageX
-  x = offsetX/zoomer.offsetWidth*100
-  y = offsetY/zoomer.offsetHeight*100
+  x = offsetX / zoomer.offsetWidth * 100
+  y = offsetY / zoomer.offsetHeight * 100
   zoomer.style.backgroundPosition = x + '% ' + y + '%';
 
 }
+
+// Header Global
+
 class siteHeader extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
@@ -38,6 +42,8 @@ class siteHeader extends HTMLElement {
 }
 customElements.define('site-header', siteHeader)
 
+// Footer global
+
 class siteFooter extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
@@ -64,34 +70,7 @@ class siteFooter extends HTMLElement {
 }
 customElements.define('site-footer', siteFooter)
 
-function createScrollSnapEffect(sectionsSelector) {
-  const sections = document.querySelectorAll(sectionsSelector);
-  let currentSectionIndex = 0;
-
-  function scrollToSection(index) {
-    if (index < 0 || index >= sections.length) {
-      return;
-    }
-
-    const targetSection = sections[index];
-    window.scrollTo({
-      top: targetSection.offsetTop,
-      behavior: 'smooth'
-    });
-    currentSectionIndex = index;
-  }
-
-  window.addEventListener('wheel', (event) => {
-    if (event.deltaY > 0) {
-      scrollToSection(currentSectionIndex + 1);
-    } else {
-      scrollToSection(currentSectionIndex - 1);
-    }
-  });
-}
-
-createScrollSnapEffect('.imageContainer1, .imageContainer2, .imageContainer3');
-createScrollSnapEffect('.scaniaAzul')
+// Sanduiche
 
 const sanduiche = document.querySelector(".sanduiche");
 const osLinks = document.querySelector(".osLinks");
@@ -102,10 +81,11 @@ sanduiche.addEventListener("click", () => {
 })
 
 
+// Carrossel 
 
 const carrossel = document.querySelector(".carrossel");
 const divs = document.querySelectorAll(".divCar");
-let slideWidth = divs[0].clientWidth; 
+let slideWidth = divs[0].clientWidth;
 
 let idx = 0;
 
@@ -116,13 +96,13 @@ function moverCarrossel() {
     idx = 0;
   }
 
-  carrossel.style.transform = `translateX(-${idx * slideWidth}px)`; 
+  carrossel.style.transform = `translateX(-${idx * slideWidth}px)`;
 }
 
 function atualizarSlideWidth() {
-  slideWidth = divs[0].clientWidth; 
-  carrossel.style.transform = `translateX(-${idx * slideWidth}px)`; 
+  slideWidth = divs[0].clientWidth;
+  carrossel.style.transform = `translateX(-${idx * slideWidth}px)`;
 }
 
-window.addEventListener("resize", atualizarSlideWidth); 
+window.addEventListener("resize", atualizarSlideWidth);
 setInterval(moverCarrossel, 3000);
